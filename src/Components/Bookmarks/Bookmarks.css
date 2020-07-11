@@ -1,0 +1,12 @@
+.Bookmarks_container {
+	width: 100%;
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Bookmarks_text {
+	font-family: 'Pacifico', cursive;
+	font-size: 5rem;
+}

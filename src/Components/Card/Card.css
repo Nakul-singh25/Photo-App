@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+:root {
+	--Card-width: 100%;
+	--Card-height: 340px;
+};
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.Card {
+	position: relative;
+	grid-column: span 1;
+	max-width: var(--Card-width);
+	width: var(--Card-width);
+	height: var(--Card-height);
+	margin: 20px auto;
+	box-shadow: 0 0 1px 0 rgba(8, 11, 14, 0.06), 0 6px 6px -1px rgba(8, 11, 14, 0.1);
+	font-family: 'Roboto', sans-serif;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.Card:hover {
+	box-shadow: 0 0 1px 0 rgba(8, 11, 14, 0.06), 0 16px 16px -1px rgba(8, 11, 14, 0.1);
+}
+.Card:hover .Card_img {
+	opacity: 0.5;
+}
+
+.Card_img {
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+	transition: all 200ms;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+.Card_bottom {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.Card_like-number {
+	font-size: 1.2rem;
+	position: absolute;
+	left: 50px;
+}
+.Card_icon-wrapper {
+	width: 30px;
+	border: none;
+	outline: none;
+	margin: 0 15px;	
+}
+
+@media (min-width: 360px) {
+	:root {
+		--Card-width: var(--Card-height);
+	};
+	.Card {
+		margin: 0 auto;
+		background: red;
+	}
+}

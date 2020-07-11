@@ -1,0 +1,33 @@
+.Select {
+	height: calc(var(--SearchBar-height) * 0.79);
+	padding: 8px 12px;
+	border: 2px solid black;
+	cursor: pointer;
+	border-radius: 45px;
+	color: black;
+	background-color: white;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: url('arrow.svg');
+	background-position: right 10px top 50%;
+	background-repeat: no-repeat;
+	background-size: 10px;
+	padding-right: 30px;
+	margin: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.8rem;
+	grid-column: span 1;
+}
+
+.Select:hover, .Select:focus {
+	background-color: black;
+	color: white;
+	outline: none;
+}
+
+.Select_option {
+	background-color: white;
+	color: black;
+	font-size: 1rem;
+}
