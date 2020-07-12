@@ -54,11 +54,11 @@ const colors = [
 				];
 const SearchBar = ({setLoading, setData}) => {
 
-	const [search, setSearch] = useState('');
-	const [category, setCategory] = useState('');
-	const [type, setType] = useState('');
-	const [orientation, setOrientation] = useState('');
-	const [color, setColor] = useState('');
+	const [search, setSearch] = useState(sessionStorage.getItem('name'));
+	const [category, setCategory] = useState(sessionStorage.getItem('category'));
+	const [type, setType] = useState(sessionStorage.getItem('type'));
+	const [orientation, setOrientation] = useState(sessionStorage.getItem('orientation'));
+	const [color, setColor] = useState(sessionStorage.getItem('color'));
 
 	const [query, setQuery] = useState({});
 
@@ -77,6 +77,11 @@ const SearchBar = ({setLoading, setData}) => {
 
 	const submit = (event) => {
 		event.preventDefault();
+		sessionStorage.setItem('name', search);
+		sessionStorage.setItem('category', category);
+		sessionStorage.setItem('type', type);
+		sessionStorage.setItem('orientation', orientation);
+		sessionStorage.setItem('color', color);
 		setQuery({ 
 			'name': search, 
 			'category': category,
@@ -97,10 +102,10 @@ const SearchBar = ({setLoading, setData}) => {
 					onChange={e => setSearch(e.target.value)}
 				/>
 				<div className="SearchBar_filter">
-					<Select data={categories} raiseSelect={setCategory}>SELECT CATEGORY</Select>
-					<Select data={types} raiseSelect={setType}>SELECT TYPE</Select>
-					<Select data={orientations} raiseSelect={setOrientation}>SELECT ORIENTATION</Select>
-					<Select data={colors} raiseSelect={setColor}>SELECT COLOR</Select>
+					<Select currentValue={category} data={categories} raiseSelect={setCategory}>SELECT CATEGORY</Select>
+					<Select currentValue={type} data={types} raiseSelect={setType}>SELECT TYPE</Select>
+					<Select currentValue={orientation} data={orientations} raiseSelect={setOrientation}>SELECT ORIENTATION</Select>
+					<Select currentValue={color} data={colors} raiseSelect={setColor}>SELECT COLOR</Select>
 				</div>
 				<button className="SearchBar_submit" onClick={e => submit(e)}>Search</button>
 			</form>
