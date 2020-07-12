@@ -12,9 +12,9 @@
 }
 
 .Searchbar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display:grid;
+	grid-template-columns: 1fr;
+	z-index: 1;
 }
 .SearchBar_title {
 	font-size: 4rem;
@@ -23,6 +23,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-top: 150px;
+	margin: 0 auto;
+	grid-column: span 1;
 }
 
 .SearchBar_form {
@@ -33,6 +36,7 @@
 	flex-direction: column;
 	margin: 1.5rem 0px;
 	font-family: 'Roboto', sans-serif;
+	grid-column: span 1;
 }
 
 .SearchBar_input {
@@ -72,6 +76,7 @@
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	cursor: pointer;
+	outline: none;
 }
 
 @media (min-width: 650px) {

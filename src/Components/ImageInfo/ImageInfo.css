@@ -1,15 +1,20 @@
 .imageInfo_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	width: 100%;
-	height: 100%;
+	height: 94%;
 	position: relative;
 }
 
 .imageInfo_img {
 	display: inline-block;
 	width: 100%;
-	height: 100%;
+	height: 50%;
 	margin: auto;
 	object-fit: contain;
+	margin: 50px 0px;
 }
 
 .imageInfo_close-icon {
@@ -24,4 +29,48 @@
 .imageInfo_close-icon * {
 	width: 100%;
 	height: 100%;
+}
+
+.imageInfo_download_icon {
+	width: 25px;
+	height: 25px;
+	margin-right:10px;
+}
+.imageInfo_download_icon * {
+	width: 100%;
+	height: 100%;
+}
+
+.imageInfo_download_button {
+	background-color: black;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 30px;
+	margin: 0 auto;
+	border-radius: 25px;
+	outline: none;
+	cursor: pointer;
+}
+.imageInfo_download_link {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+}
+
+@media (min-width: 1000px) {
+	.imageInfo_container {
+		flex-direction: row;
+	}
+	.imageInfo_img {
+		display: inline-block;
+		width: 50%;
+		height: 100%;
+		margin: auto;
+		object-fit: contain;
+		margin: 50px 0px;
+	}
 }

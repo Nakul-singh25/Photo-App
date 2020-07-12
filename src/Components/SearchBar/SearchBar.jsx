@@ -54,11 +54,11 @@ const colors = [
 				];
 const SearchBar = ({setLoading, setData}) => {
 
-	const [search, setSearch] = useState(sessionStorage.getItem('name'));
-	const [category, setCategory] = useState(sessionStorage.getItem('category'));
-	const [type, setType] = useState(sessionStorage.getItem('type'));
-	const [orientation, setOrientation] = useState(sessionStorage.getItem('orientation'));
-	const [color, setColor] = useState(sessionStorage.getItem('color'));
+	const [search, setSearch] = useState(sessionStorage.getItem('name') ? sessionStorage.getItem('name') : '');
+	const [category, setCategory] = useState(sessionStorage.getItem('category') ? sessionStorage.getItem('category') : '');
+	const [type, setType] = useState(sessionStorage.getItem('type') ? sessionStorage.getItem('type') : '');
+	const [orientation, setOrientation] = useState(sessionStorage.getItem('orientation') ? sessionStorage.getItem('orientation') : '');
+	const [color, setColor] = useState(sessionStorage.getItem('color') ? sessionStorage.getItem('color') : '');
 
 	const [query, setQuery] = useState({});
 
