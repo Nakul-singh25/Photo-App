@@ -21,7 +21,7 @@
 	background-color: white;
 	border: none;
 	border-radius: 30px;
-	margin: 0 10px;
+	margin: 0 2px;
 	padding: 10px;
 	font-weight: 700;
 	cursor: pointer;
@@ -29,7 +29,7 @@
 }
 
 .Nav-icon:hover {
-	background-color: #8a94a6;
-	box-shadow: 0 0 1px 0 rgba(8, 11, 14, 0.06), 0 3px 3px -1px rgba(8, 11, 14, 0.1);
+	background-color: rgba(0,0,0,0.09);
+	/*box-shadow: 0 0 1px 0 rgba(8, 11, 14, 0.06), 0 3px 3px -1px rgba(8, 11, 14, 0.1);*/
 
 }

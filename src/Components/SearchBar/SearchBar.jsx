@@ -102,10 +102,10 @@ const SearchBar = ({setLoading, setData}) => {
 					onChange={e => setSearch(e.target.value)}
 				/>
 				<div className="SearchBar_filter">
-					<Select currentValue={category} data={categories} raiseSelect={setCategory}>SELECT CATEGORY</Select>
-					<Select currentValue={type} data={types} raiseSelect={setType}>SELECT TYPE</Select>
-					<Select currentValue={orientation} data={orientations} raiseSelect={setOrientation}>SELECT ORIENTATION</Select>
-					<Select currentValue={color} data={colors} raiseSelect={setColor}>SELECT COLOR</Select>
+					<Select currentValue={category} data={categories} raiseSelect={setCategory}>CATEGORY</Select>
+					<Select currentValue={type} data={types} raiseSelect={setType}>TYPE</Select>
+					<Select currentValue={orientation} data={orientations} raiseSelect={setOrientation}>ORIENTATION</Select>
+					<Select currentValue={color} data={colors} raiseSelect={setColor}>COLOR</Select>
 				</div>
 				<button className="SearchBar_submit" onClick={e => submit(e)}>Search</button>
 			</form>

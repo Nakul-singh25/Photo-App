@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400&display=swap');
+
 :root {
-	--SearchBar-height: 45px;
-	--SearchBar-width: 450px;
+	--SearchBar_input--width: 80%;
+	--SearchBar_input--height: 10px;
 };
 
 * {
@@ -9,93 +10,75 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
 .Searchbar {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .SearchBar_title {
+	font-size: 4rem;
 	font-family: 'Pacifico', cursive;
-	font-size: 8rem;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.SearchBar_logo {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-}
-
 .SearchBar_form {
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 85px;
-	position: relative;
+	margin: 1.5rem 0px;
+	font-family: 'Roboto', sans-serif;
 }
 
 .SearchBar_input {
-	height: var(--SearchBar-height);
-	width: var(--SearchBar-width);
-	border: 2px solid black;
-	border-radius: 30px;
-	font-size: 1rem;
-	padding: 0 20px;
-	margin: 10px 0px;
+    font-size: 20px;
+    font-family: arial, sans-serif;
+	padding: 1.3rem;
+	color: black;
+	background-color: white;
+	max-width: 690px;
+	width: var(--SearchBar_input--width);
+	height: var(--SearchBar_input--height);
+	border: 1px solid #dfe1e5;
+	border-radius: 24px;
+	line-height: 34px;
 	outline: none;
+}
+
+.SearchBar_input:hover, .SearchBar_input:focus {
+	box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
 
 .SearchBar_filter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.SearchBar_submit {
-	width: calc(var(--SearchBar-width) * 0.30);
-	height: calc(var(--SearchBar-height) + 4px);
-	font-family: 'Roboto', sans-serif;
-	font-size: 11px;
-	text-transform: uppercase;
-	letter-spacing: 2.5px;
-	font-weight: 500;
-	color: white;
-	background-color: black;
-	border: 2px solid black;
-	border-radius: 45px;
-	transition: all 0.3s ease 0s;
-	cursor: pointer;
-	outline: none;
-	margin: 10px 0;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 1fr;
+	margin: 1.5rem;
 }
 
-.SearchBar_submit:hover {
-	background-color: white;
-	color: black;
+.SearchBar_submit {
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 12px 30px;
+	border-radius: 25px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	cursor: pointer;
 }
-@media (max-width: 1100px) {
-	* {
-		--SearchBar-height: 45px;
-		--SearchBar-width: 350px;
+
+@media (min-width: 650px) {
+	.SearchBar_title {
+		font-size: 5rem;
 	}
 	.SearchBar_filter {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-	.SearchBar_title {
-		font-size: 6rem;
-	}
-}
-
-@media (max-width: 500px) {
-	* {
-		--SearchBar-height: 45px;
-		--SearchBar-width: 350px;
-	}
-	.SearchBar_title {
-		font-size: 4rem;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
 	}
 }

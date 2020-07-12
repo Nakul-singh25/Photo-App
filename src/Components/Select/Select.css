@@ -1,7 +1,7 @@
 .Select {
-	height: calc(var(--SearchBar-height) * 0.79);
+	width: 140px;
 	padding: 8px 12px;
-	border: 2px solid black;
+	border: 1px solid black;
 	cursor: pointer;
 	border-radius: 45px;
 	color: black;
@@ -14,10 +14,11 @@
 	background-repeat: no-repeat;
 	background-size: 10px;
 	padding-right: 30px;
-	margin: 10px;
+	margin: 0px auto;
 	font-family: 'Roboto', sans-serif;
 	font-size: 0.8rem;
 	grid-column: span 1;
+	transition: background 300ms ease-in-out;
 }
 
 .Select:hover, .Select:focus {
